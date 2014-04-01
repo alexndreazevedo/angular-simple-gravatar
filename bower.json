@@ -1,0 +1,28 @@
+{
+  "name": "angular-gravatar",
+  "main": "dist/angular-bootstrap-media.js",
+  "version": "0.0.6",
+  "description": "Bootstrap Media with social interactivity",
+  "homepage": "https://github.com/daemon1981/angular-bootstrap-media",
+  "authors": [
+    "Damien Saillard <dam.saillard@gmail.com>"
+  ],
+  "keywords": [
+    "angular",
+    "gravatar"
+  ],
+  "dependencies": {
+    "angular": "v1.2.14"
+  },
+  "devDependencies": {
+    "angular-mocks": "v1.2.14"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "src"
+  ]
+}
