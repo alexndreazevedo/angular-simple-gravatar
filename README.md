@@ -1,14 +1,15 @@
-# angular-angular [![Build Status](https://secure.travis-ci.org/daemon1981/angular-angular.png)](https://travis-ci.org/daemon1981/angular-angular)
+# angular-gravatar [![Build Status](https://secure.travis-ci.org/daemon1981/angular-gravatar.png)](https://travis-ci.org/daemon1981/angular-gravatar)
 
 ## Description
 
 A simple directive to display a gravatar image given an email
+
 From [angular-app](https://github.com/angular-app/angular-app/blob/master/client/src/common/directives/gravatar.js)
 
 ## Installation
 
 ```
-bower install angular-angular
+bower install angular-gravatar
 ```
 
 ## Use
@@ -23,7 +24,7 @@ bower install angular-angular
 ### Include module in your angular module
 
 ```
-angular.module('myModule', ['angular-angular']);
+angular.module('myModule', ['angular-gravatar']);
 ```
 
 ### Exemple of using it for a list of posts
@@ -48,6 +49,6 @@ angular.module('myModule', ['angular-angular']);
  
 This will start Karma server and will continuously watch files in the project, executing tests upon every change.
 
-### Projects using angular-angular
+### Projects using angular-gravatar
 
  - [Workbook](https://github.com/eleven-labs/Workbook)
