@@ -1,6 +1,6 @@
 {
-  "name": "angular-gravatar",
-  "version": "0.0.6",
+  "name": "angular-simple-gravatar",
+  "version": "0.0.2",
   "description": "Bootstrap Media with social interactivity",
   "main": "index.js",
   "scripts": {

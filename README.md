@@ -1,4 +1,4 @@
-# angular-gravatar [![Build Status](https://secure.travis-ci.org/daemon1981/angular-gravatar.png)](https://travis-ci.org/daemon1981/angular-gravatar)
+# angular-simple-gravatar [![Build Status](https://secure.travis-ci.org/daemon1981/angular-simple-gravatar.png)](https://travis-ci.org/daemon1981/angular-simple-gravatar)
 
 ## Description
 
@@ -9,7 +9,7 @@ From [angular-app](https://github.com/angular-app/angular-app/blob/master/client
 ## Installation
 
 ```
-bower install angular-gravatar
+bower install angular-simple-gravatar
 ```
 
 ## Use
@@ -18,13 +18,13 @@ bower install angular-gravatar
 
 ```
 <script src="angular.min.js"></script>
-<script src="angular-gravatar.js"></script>
+<script src="angular-simple-gravatar.js"></script>
 ```
 
 ### Include module in your angular module
 
 ```
-angular.module('myModule', ['angular-gravatar']);
+angular.module('myModule', ['angular-simple-gravatar']);
 ```
 
 ### Exemple of using it for a list of posts
@@ -49,6 +49,6 @@ angular.module('myModule', ['angular-gravatar']);
  
 This will start Karma server and will continuously watch files in the project, executing tests upon every change.
 
-### Projects using angular-gravatar
+### Projects using angular-simple-gravatar
 
  - [Workbook](https://github.com/eleven-labs/Workbook)
