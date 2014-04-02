@@ -1,8 +1,8 @@
-/*! angular-simple-gravatar - v0.0.2 - 2014-04-02
+/*! angular-simple-gravatar - v0.0.3 - 2014-04-02
  * Copyright (c) 2014 Damien Saillard <dam.saillard@gmail.com> (http://damien-saillard.fr/);
  * Licensed 
  */
-angular.module('directives.gravatar', [])
+angular.module('angular.simple.gravatar', [])
 
 // A simple directive to display a gravatar image given an email
 .directive('gravatar', ['md5', function(md5) {

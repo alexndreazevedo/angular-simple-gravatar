@@ -1,4 +1,4 @@
-angular.module('directives.gravatar', [])
+angular.module('angular.simple.gravatar', [])
 
 // A simple directive to display a gravatar image given an email
 .directive('gravatar', ['md5', function(md5) {

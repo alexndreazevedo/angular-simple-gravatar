@@ -1,6 +1,6 @@
-describe('directives.gravatar', function () {
+describe('angular.simple.gravatar', function () {
   var element, scope;
-  beforeEach(module('directives.gravatar'));
+  beforeEach(module('angular.simple.gravatar'));
   beforeEach(inject(function($compile, $rootScope) {
     scope = $rootScope;
     scope.email = "pete@bacondarwin.com";
