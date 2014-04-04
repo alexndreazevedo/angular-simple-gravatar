@@ -8,28 +8,28 @@ From [angular-app](https://github.com/angular-app/angular-app/blob/master/client
 
 ## Installation
 
-```
-bower install angular-simple-gravatar
+```bash
+$ bower install angular-simple-gravatar
 ```
 
 ## Use
 
 ### Include in your header
 
-```
+```html
 <script src="angular.min.js"></script>
 <script src="angular-simple-gravatar.js"></script>
 ```
 
 ### Include module in your angular module
 
-```
+```javascript
 angular.module('myModule', ['angular-simple-gravatar']);
 ```
 
 ### Exemple of using it for a list of posts
 
-```
+```html
 <gravatar email="email" size="30" default-image="'monsterid'"></gravatar>
 ```
 
