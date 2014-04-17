@@ -1,3 +1,7 @@
+/*! angular-simple-gravatar - v0.0.3 - 2014-04-17
+ * Copyright (c) 2014 Damien Saillard <dam.saillard@gmail.com> (http://damien-saillard.fr/);
+ * Licensed 
+ */
 /*! angular-simple-gravatar - v0.0.3 - 2014-04-02
  * Copyright (c) 2014 Damien Saillard <dam.saillard@gmail.com> (http://damien-saillard.fr/);
  * Licensed 
@@ -5,11 +9,11 @@
 angular.module('angular.simple.gravatar', [])
 
 // A simple directive to display a gravatar image given an email
-.directive('gravatar', ['md5', function(md5) {
+.directive('gravatar', ['gravatar', function(gravatar) {
 
   return {
     restrict: 'E',
-    template: '<img ng-src="http://www.gravatar.com/avatar/{{hash}}{{getParams}}"/>',
+    template: '<img ng-src="{{src}}"/>',
     replace: true,
     scope: {
       email: '=',
@@ -21,38 +25,48 @@ angular.module('angular.simple.gravatar', [])
       scope.options = {};
       scope.$watch('email', function(email) {
         if ( email ) {
-          scope.hash = md5(email.trim().toLowerCase());
+          scope.src = gravatar(email.trim().toLowerCase(), scope.options);
         }
       });
       scope.$watch('size', function(size) {
         scope.options.s = (angular.isNumber(size)) ? size : undefined;
-        generateParams();
+        scope.src = gravatar(scope.email, scope.options);
       });
       scope.$watch('forceDefault', function(forceDefault) {
         scope.options.f = forceDefault ? 'y' : undefined;
-        generateParams();
+        scope.src = gravatar(scope.email, scope.options);
       });
       scope.$watch('defaultImage', function(defaultImage) {
         scope.options.d = defaultImage ? defaultImage : undefined;
-        generateParams();
+        scope.src = gravatar(scope.email, scope.options);
       });
-      function generateParams() {
-        var options = [];
-        scope.getParams = '';
-        angular.forEach(scope.options, function(value, key) {
-          if ( value ) {
-            options.push(key + '=' + encodeURIComponent(value));
-          }
-        });
-        if ( options.length > 0 ) {
-          scope.getParams = '?' + options.join('&');
-        }
-      }
     }
   };
 }])
 
-.factory('md5', function() {
+.factory('gravatar', ['gravatarEmailHash', function(gravatarEmailHash){
+
+  var generateOptionsQuery = function(options) {
+    var tmpOptions = [];
+    angular.forEach(options, function(value, key) {
+      if ( value ) {
+        tmpOptions.push(key + '=' + encodeURIComponent(value));
+      }
+    });
+    if ( tmpOptions.length > 0 ) {
+      return '?' + tmpOptions.join('&');
+    }
+    return '';
+  };
+
+  return function(email, options) {
+    var hash = gravatarEmailHash(email.trim().toLowerCase());
+    var getParams = generateOptionsQuery(options);
+    return 'http://www.gravatar.com/avatar/' + hash + getParams;
+  };
+}])
+
+.factory('gravatarEmailHash', function() {
   function md5cycle(x, k) {
     var a = x[0],
       b = x[1],
