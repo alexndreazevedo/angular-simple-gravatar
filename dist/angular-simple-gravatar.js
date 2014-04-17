@@ -1,4 +1,4 @@
-/*! angular-simple-gravatar - v0.0.3 - 2014-04-17
+/*! angular-simple-gravatar - v0.0.4 - 2014-04-17
  * Copyright (c) 2014 Damien Saillard <dam.saillard@gmail.com> (http://damien-saillard.fr/);
  * Licensed 
  */
